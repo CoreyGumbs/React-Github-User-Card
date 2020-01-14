@@ -19,8 +19,10 @@ class UserSearchBar extends React.Component{
     }
 
     handleSubmit = e => {
+        const {handleUserSearch} = this.props;
         e.preventDefault();
-        console.log(this.state.username);
+        handleUserSearch(this.state.username.toLowerCase());
+        this.setState({username: ''})
     }
 
     render(){

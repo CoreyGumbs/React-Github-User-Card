@@ -10,7 +10,7 @@ class App extends React.Component{
   constructor(){
     super();
     this.state = {
-      username: 'CoreyGumbs',
+      username: 'CoreyGumbs'.toLowerCase(),
       userData: {}
     }
   }
@@ -23,11 +23,15 @@ class App extends React.Component{
     .catch(err => console.log(err));
   }
  
+  handleUserSearch = username => {
+    this.setState({username: username});
+  }
   
   render(){
+    console.log(this.state);
     return(
       <div>
-        <UserSearchBar/>
+        <UserSearchBar handleUserSearch={this.handleUserSearch}/>
         {this.state.userData.login}
       </div>
     )
