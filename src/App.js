@@ -22,6 +22,16 @@ class App extends React.Component{
     })
     .catch(err => console.log(err));
   }
+
+  componentDidUpdate(prevProps, prevState){
+    if(this.state.username !== prevState.username){
+      axios.get(`https://api.github.com/users/${this.state.username}`)
+      .then(res=> {
+        this.setState({userData: res.data});
+      })
+      .catch(err => console.log(err));
+    }
+  }
  
   handleUserSearch = username => {
     this.setState({username: username});
