@@ -11,23 +11,35 @@ class App extends React.Component{
     super();
     this.state = {
       username: 'CoreyGumbs'.toLowerCase(),
-      userData: {}
+      userData: {},
+      userFollowers: {}
     }
   }
 
   componentDidMount(){
-    axios.get(`https://api.github.com/users/${this.state.username}`)
-    .then(res=> {
-      this.setState({userData: res.data});
+    const {username} = this.state;
+ 
+    axios.all([
+      axios.get(`https://api.github.com/users/${username}`), 
+      axios.get(`https://api.github.com/users/${username}/followers`)
+    ])
+    .then(res => {
+      this.setState({userData: res[0].data});
+      this.setState({userFollowers: res[1].data});
     })
     .catch(err => console.log(err));
   }
 
   componentDidUpdate(prevProps, prevState){
+    const {username} = this.state;
     if(this.state.username !== prevState.username){
-      axios.get(`https://api.github.com/users/${this.state.username}`)
-      .then(res=> {
-        this.setState({userData: res.data});
+      axios.all([
+        axios.get(`https://api.github.com/users/${username}`), 
+        axios.get(`https://api.github.com/users/${username}/followers`)
+      ])
+      .then(res => {
+        this.setState({userData: res[0].data});
+        this.setState({userFollowers: res[1].data});
       })
       .catch(err => console.log(err));
     }
