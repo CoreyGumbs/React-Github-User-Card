@@ -1,5 +1,10 @@
 import React from 'react';
+
+//CSS
 import './css/usersearchbar.css';
+
+//Components
+import UserSearchForm from './UserSearchForm';
 
 class UserSearchBar extends React.Component{
     constructor(props){
@@ -9,16 +14,24 @@ class UserSearchBar extends React.Component{
         }
     }
 
-    render(){
+    handleChanges = e => {
+        this.setState({username: e.target.value});
+    }
 
+    handleSubmit = e => {
+        e.preventDefault();
+        console.log(this.state.username);
+    }
+
+    render(){
+        const {username} = this.state;
+    
         return(
             <header className="user-search-bar-container">
-                search bar
+                <UserSearchForm handleChanges={this.handleChanges} handleSubmit={this.handleSubmit} username={username} />
             </header>
-        );
-
-    }
-    
+       );
+    }  
 }
 
 export default UserSearchBar;
