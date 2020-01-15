@@ -57,8 +57,9 @@ class App extends React.Component{
   }
   
   render(){
-    const { username,userData, userFollowers} = this.state;
-   
+    const {username, userData, userFollowers} = this.state;
+
+    //console.log(username);
     return(
       <main className="container">
         <UserHeader handleUserSearch={this.handleUserSearch}/>
@@ -69,9 +70,7 @@ class App extends React.Component{
           <div className="github-calendar">
             <h1>GitUser Contributions:</h1>
             <div className="github-contributions">
-              <GitHubCalendar username={username} fontSize={18} blockSize={25}>
-                <ReactTooltip delayShow={50} html/>
-              </GitHubCalendar >   
+              <GitHubCalendar username={username} fontSize={18} blockSize={25} fullYear={false}/>
             </div>
           </div>
           <UserFollowers followers={userFollowers}/> 

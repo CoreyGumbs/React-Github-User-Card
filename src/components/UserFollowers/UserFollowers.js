@@ -7,7 +7,6 @@ import './css/followers-styles.css';
 import Follower from './Follower';
 
 const UserFollowers = ({followers}) => {
-    console.log(followers);
     return(
         <div className="user-followers-container">
             {followers.map((follower, idx) => (
