@@ -1,12 +1,13 @@
 import React from 'react';
 
 //CSS
-import './css/usersearchbar.css';
+import './css/user-header-styles.css';
 
 //Components
 import UserSearchForm from './UserSearchForm';
+import UserHeaderLogo from './UserHeaderLogo';
 
-class UserSearchBar extends React.Component{
+class UserHeader extends React.Component{
     constructor(props){
         super(props);
         this.state = {
@@ -29,11 +30,14 @@ class UserSearchBar extends React.Component{
         const {username} = this.state;
     
         return(
-            <header className="user-search-bar-container">
-                <UserSearchForm handleChanges={this.handleChanges} handleSubmit={this.handleSubmit} username={username} />
+            <header className="user-header">
+                <div className="user-header-container">
+                    <UserHeaderLogo />
+                    <UserSearchForm handleChanges={this.handleChanges} handleSubmit={this.handleSubmit} username={username} />
+                </div>
             </header>
        );
     }  
 }
 
-export default UserSearchBar;
+export default UserHeader;

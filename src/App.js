@@ -4,10 +4,10 @@ import React from 'react';
 import axios from 'axios';
 
 //css
-import './css/styles.css';
+import './css/styles.css'
 
 //components
-import UserSearchBar from './components/UserSearch/UserSearchBar';
+import UserHeader from './components/UserHeader/UserHeader';
 import UserCard from './components/UserCard/UserCard';
 
 class App extends React.Component{
@@ -58,7 +58,7 @@ class App extends React.Component{
     console.log(userData, userFollowers);
     return(
       <main className="container">
-        <UserSearchBar handleUserSearch={this.handleUserSearch}/>
+        <UserHeader handleUserSearch={this.handleUserSearch}/>
         <UserCard user={userData} />
       </main>
     )

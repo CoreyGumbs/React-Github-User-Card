@@ -1,0 +1,61 @@
+.user-header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 10px 0;
+    background-color: rgba(36, 37, 42, 1);
+}
+
+.user-header-container{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container{
+    width: 300px;
+}
+
+.logo-heading{
+    margin: 0;
+    padding: 0;
+    font-family: 'Passion One', cursive;
+    font-size: 4rem;
+    color: white;
+}
+
+.search-form{
+    border: 0;
+}
+
+.search-form input{
+    width: 500px;
+    margin: 0 10px;
+    padding: 10px 20px;
+    font-size: 1.3rem;
+    border: 0;
+    border-radius: 5px;
+}
+
+.search-form input:focus{
+    outline: none;
+}
+
+.search-form-btn{
+    margin: 0;
+    padding: 10px 20px;
+    font-size: 1.3rem;
+    border: 0;
+    border-radius: 5px;
+    color: white;
+    background-color: rgba(103, 65, 114, 1);
+}
+
+.search-form-btn:hover{
+    background-color: rgba(145, 61, 136, 1);
+}
