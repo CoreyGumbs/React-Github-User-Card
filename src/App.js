@@ -69,9 +69,9 @@ class App extends React.Component{
         <section className="user-info-container">
           <div className="github-calendar">
             <h1>GitUser Contributions:</h1>
-            <div className="github-contributions">
+            {/* <div className="github-contributions">
               <GitHubCalendar username={username} fontSize={18} blockSize={25}/>
-            </div>
+            </div> */}
           </div>
           <UserFollowers followers={userFollowers}/> 
         </section>
