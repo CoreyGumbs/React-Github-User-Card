@@ -9,6 +9,7 @@ import './css/styles.css'
 //components
 import UserHeader from './components/UserHeader/UserHeader';
 import UserCard from './components/UserCard/UserCard';
+import UserFollowers from './components/UserFollowers/UserFollowers';
 
 class App extends React.Component{
   constructor(){
@@ -55,11 +56,16 @@ class App extends React.Component{
   
   render(){
     const { userData, userFollowers} = this.state;
-    console.log(userData, userFollowers);
+   
     return(
       <main className="container">
         <UserHeader handleUserSearch={this.handleUserSearch}/>
-        <UserCard user={userData} />
+        <section className="user-card-container">
+          <UserCard user={userData} />
+        </section>
+        <section className="user-info-container">
+          <UserFollowers followers={userFollowers}/> 
+        </section>
       </main>
     )
   }
