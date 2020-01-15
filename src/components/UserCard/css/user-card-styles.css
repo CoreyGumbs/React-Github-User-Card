@@ -1,0 +1,117 @@
+.user-card-container{
+    position: fixed;
+    width: 20%;
+    padding: 20px 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.user-card-img-container{
+    width: 400px;
+    display: flex;
+    justify-content: center;
+}
+
+.user-card-img-container img{
+    width: 100%;
+    /* border: 1px solid rgba(36, 37, 42, 1); */
+    border-radius: 20px;
+}
+
+.user-card-content-container{
+    width: 100%;
+    margin: 20px 0; 
+}
+
+.user-card-heading{
+    width: 100%;
+    margin: 0 0 10px 0;
+    padding: 0;
+    font-size: 3rem;
+}
+
+.joined-date{
+    margin: 20px 0;
+    color: rgba(191, 191, 191, 1);
+    font-size: 1.3rem;
+    font-style: italic;
+}
+
+.user-card-location{
+    margin: 10px 0;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.user-card-bio{
+    font-size: 1.7rem;
+}
+
+.user-card-followers-btn, .user-card-following-btn{
+    padding: 10px 29px;
+    border: 0;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    color: white;
+    
+}
+
+.user-card-followers-btn{
+    margin-right: 10px;
+    background-color: rgba(34, 49, 63, 1);
+}
+
+.user-card-following-btn{
+    background-color: rgba(30, 139, 195, 1);
+}
+
+.btn-badges{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.user-card-hireable-btn{
+    width: 100%;
+    margin: 20px 0;
+    padding: 10px 0;
+    font-size: 3rem;
+    border: 0;
+    border-radius: 5px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+}
+
+.hireable{
+    background-color: rgba(3, 166, 120, 1);
+}
+
+.not-hireable{
+    background-color: rgba(214, 69, 65, 1);
+}
+
+#user-follow-btn-link{
+    text-decoration: none;
+}
+
+.user-follow-btn{
+    width: 100%;
+    margin: 20px 0;
+    background-color: rgba(103, 65, 114, 1);
+    padding: 10px 0;
+    font-size: 1.8rem;
+    border: 0;
+    border-radius: 5px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+}
+
+
+.user-follow-btn:hover{
+    background-color: rgba(103, 65, 114, 1);
+}
