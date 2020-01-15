@@ -3,8 +3,12 @@ import React from 'react';
 //dependecies
 import axios from 'axios';
 
+//css
+import './css/styles.css';
+
 //components
 import UserSearchBar from './components/UserSearch/UserSearchBar';
+import UserCard from './components/UserCard/UserCard';
 
 class App extends React.Component{
   constructor(){
@@ -12,7 +16,7 @@ class App extends React.Component{
     this.state = {
       username: 'CoreyGumbs'.toLowerCase(),
       userData: {},
-      userFollowers: {}
+      userFollowers: []
     }
   }
 
@@ -50,12 +54,13 @@ class App extends React.Component{
   }
   
   render(){
-    console.log(this.state);
+    const { userData, userFollowers} = this.state;
+    console.log(userData, userFollowers);
     return(
-      <div>
+      <main className="container">
         <UserSearchBar handleUserSearch={this.handleUserSearch}/>
-        {this.state.userData.login}
-      </div>
+        <UserCard user={userData} />
+      </main>
     )
   }
 }

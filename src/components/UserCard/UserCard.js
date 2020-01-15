@@ -1,10 +1,11 @@
 import React from 'react';
 
-const UserCard = ({data}) => {
+const UserCard = ({user}) => {
     return(
-        <div>
-            usercard
-        </div>
+        <section className="user-card-container">
+            <h1>{user.login}</h1>
+            <img src={user.avatar_url} alt=""/>
+        </section> 
     )
 }
 
