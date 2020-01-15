@@ -43,3 +43,13 @@ main{
     display: flex;
     flex-flow: row wrap;
 }
+
+.github-calendar{
+    width: 100%;
+    padding: 20px;
+    border: 1px solid red;
+}
+
+.github-calendar h1{
+    font-size: 3rem;
+}

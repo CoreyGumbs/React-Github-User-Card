@@ -10,6 +10,8 @@ import './css/styles.css'
 import UserHeader from './components/UserHeader/UserHeader';
 import UserCard from './components/UserCard/UserCard';
 import UserFollowers from './components/UserFollowers/UserFollowers';
+import GitHubCalendar from 'react-github-calendar';
+import ReactTooltip from 'react-tooltip'
 
 class App extends React.Component{
   constructor(){
@@ -55,7 +57,7 @@ class App extends React.Component{
   }
   
   render(){
-    const { userData, userFollowers} = this.state;
+    const { username,userData, userFollowers} = this.state;
    
     return(
       <main className="container">
@@ -64,6 +66,15 @@ class App extends React.Component{
           <UserCard user={userData} />
         </section>
         <section className="user-info-container">
+          <div className="github-calendar">
+            <h1>GitUser Contributions:</h1>
+            <div className="github-contributions">
+              <GitHubCalendar username={username} fontSize={18} blockSize={25}>
+                <ReactTooltip delayShow={50} html/>
+              </GitHubCalendar >
+              
+            </div>
+          </div>
           <UserFollowers followers={userFollowers}/> 
         </section>
       </main>

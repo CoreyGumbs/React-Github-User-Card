@@ -10,9 +10,11 @@
     "moment": "^2.24.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+    "react-github-calendar": "^0.14.1",
     "react-moment": "^0.9.7",
     "react-normalize": "^0.4.4",
-    "react-scripts": "3.3.0"
+    "react-scripts": "3.3.0",
+    "react-tooltip": "^3.11.2"
   },
   "scripts": {
     "start": "react-scripts start",

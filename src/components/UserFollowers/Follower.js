@@ -7,7 +7,7 @@ const Follower = ({follower}) => {
                 <img src={follower.avatar_url} alt={follower.login}/>
             </div>
             <h1 className="follower-heading">
-                <a href={follower.html_url} target="_blank"  rel="noopener noreferrer">
+                <a className="follower-link" href={follower.html_url} target="_blank"  rel="noopener noreferrer">
                     {follower.login}
                 </a>
             </h1>
