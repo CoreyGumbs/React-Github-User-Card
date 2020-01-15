@@ -71,8 +71,7 @@ class App extends React.Component{
             <div className="github-contributions">
               <GitHubCalendar username={username} fontSize={18} blockSize={25}>
                 <ReactTooltip delayShow={50} html/>
-              </GitHubCalendar >
-              
+              </GitHubCalendar >   
             </div>
           </div>
           <UserFollowers followers={userFollowers}/> 
