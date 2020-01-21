@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css?family=Passion+One|Roboto&display=swap');
+
+*{
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+
+}
+
+main{
+    position: relative;
+    top: 80px;
+    left: 0;
+}
+
+.user-card-container{
+    position: fixed;
+    width: 20%;
+    padding: 20px 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.user-info-container{
+    position: relative;
+    left: 400px;
+    width: 73.5%;
+    /* border: 1px solid red; */
+    z-index: -9999;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.follower-section-container{
+    border: 1px solid blue;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.github-calendar{
+    width: 100%;
+    padding: 20px;
+}
+
+.github-calendar h1{
+    font-size: 3rem;
+}
